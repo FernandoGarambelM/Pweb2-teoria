@@ -7,8 +7,8 @@
     <body> 
         <h1>Hola Mundo desde Django</h1>
         <h2>Con template</h2>
-        {{ request.user }}
-        <br>
-        {{ request.user.is_authenticated}}
+        {% block content %}
+            Reemplazame
+        {% endblock %}
     </body>
 </html>
