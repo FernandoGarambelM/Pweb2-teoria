@@ -18,8 +18,10 @@
                     <li>{{ myItem }} - {{forloop.counter}}
                     {% if myItem < 30 %}
                         -Este numero es menor que 30
-                    {% elif myItem % 2 %}
+                    {% elif myItem|divisibleby:2 %}
                         -Este numero es par
+                    {% elif myItem|length <= 2 %}
+                        -Este numero es de dos cifras
                     {% endif %}
                     </li>
                 {% endfor %}
