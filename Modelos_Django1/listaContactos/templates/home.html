@@ -15,14 +15,14 @@
             </p>
             <ul>
                 {% for myItem in myList %}
-                    <li>{{ myItem }} - {{forloop.counter}}
-                    {% if myItem < 30 %}
-                        -Este numero es menor que 30
-                    {% elif myItem|divisibleby:2 %}
-                        -Este numero es par
-                    {% elif myItem|length <= 2 %}
-                        -Este numero es de dos cifras
-                    {% endif %}
+                    <li>{{ myItem }} - 
+                        {{forloop.counterfirst}} -
+                        {{forloop.counter}} -
+                        {{forloop.revcounter}} -
+                        {{forloop.revcounter0}} -
+                        {{forloop.first}} -
+                        {{forloop.last}} -
+                        {{forloop.parentloop}}
                     </li>
                 {% endfor %}
             </ul>
