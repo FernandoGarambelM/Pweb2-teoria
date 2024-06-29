@@ -15,7 +15,13 @@
             </p>
             <ul>
                 {% for myItem in myList %}
-                    <li>{{ myItem }} - {{forloop.counter}}</li>
+                    <li>{{ myItem }} - {{forloop.counter}}
+                    {% if myItem < 30 %}
+                        -Este numero es menor que 30
+                    {% elif myItem % 2 %}
+                        -Este numero es par
+                    {% endif %}
+                    </li>
                 {% endfor %}
             </ul>
         {% endblock %}
